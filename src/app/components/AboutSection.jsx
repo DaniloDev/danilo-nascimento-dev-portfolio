@@ -5,26 +5,56 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
+    title: "skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
+      <div className="flex flex-row list-disc pl-2">
+        <div>
+          <label>Frontend Development</label>
+          <div>
+            <br />
+            <ul className="list-disc" style={{ listStyle: "none" }}>
+              <li>
+                <i class="ri-checkbox-circle-line"></i> NextJs
+              </li>
+              <li><i class="ri-checkbox-circle-line"></i> React</li>
+              <li><i class="ri-checkbox-circle-line"></i> React Native</li>
+              <li><i class="ri-checkbox-circle-line"></i> Angular</li>
+              <li><i class="ri-checkbox-circle-line"></i> Ionic</li>
+              <li><i class="ri-checkbox-circle-line"></i> VueJs</li>
+              <li><i class="ri-checkbox-circle-line"></i> Figma</li>
+              <li><i class="ri-checkbox-circle-line"></i> Android Studio</li>
+            </ul>
+          </div>
+        </div>
+<span className="flex flex-auto"></span>
+        <div>
+          <label>Backend Development</label>
+          <div>
+            <br />
+            <ul className="list-disc" style={{ listStyle: "none" }}>
+              <li>
+                <i class="ri-checkbox-circle-line"></i> NodeJS
+              </li>
+              <li><i class="ri-checkbox-circle-line"></i> Spring Boot</li>
+              <li><i class="ri-checkbox-circle-line"></i> MongoDB</li>
+              <li><i class="ri-checkbox-circle-line"></i> Node.js</li>
+              <li><i class="ri-checkbox-circle-line"></i> MERN</li>
+              <li><i class="ri-checkbox-circle-line"></i> PostgreSQL</li>
+              <li><i class="ri-checkbox-circle-line"></i> Sequelize</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+      <ul className="list-disc pl-2" style={{ listStyle: "none" }}>
+        <li><i class="ri-checkbox-circle-line"></i> Computer Science</li>
+        <li><i class="ri-checkbox-circle-line"></i> Unifacs - Salvador University</li>
       </ul>
     ),
   },
@@ -32,9 +62,9 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+      <ul className="list-disc pl-2" style={{ listStyle: "none" }}>
+        <li><i class="ri-checkbox-circle-line"></i> AWS Cloud Practitioner</li>
+        <li><i class="ri-checkbox-circle-line"></i> Google Professional Cloud Developer</li>
       </ul>
     ),
   },
@@ -53,7 +83,12 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/image-about-me.png" width={500} height={200} alt="Image About" />
+        <Image
+          src="/images/image-about-me.png"
+          width={500}
+          height={200}
+          alt="Image About"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
