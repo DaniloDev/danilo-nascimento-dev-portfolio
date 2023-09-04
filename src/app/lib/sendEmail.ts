@@ -1,12 +1,6 @@
 import emailjs from "@emailjs/browser";
 
-interface Props {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export const sendEmail = ({ name, email, message }: Props) => {
+export const sendEmail = (name, email, message) => {
   const templatePrams = {
     name: name,
     email: email,
@@ -23,7 +17,6 @@ export const sendEmail = ({ name, email, message }: Props) => {
     .then(
       (resp) => {
         alert("Email sent successfully, we will contact you shortly!");
-        console.log(resp.status, resp.text);
       },
       (err) => {
         alert("An error occurred please try again later");
