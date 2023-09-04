@@ -37,8 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum.
+          I'm a generalist developer, I've developed projects such as mobile, frontend, backend and fullstck, curious and always willing to learn and evolve.
           </p>
           <div>
             <Link
