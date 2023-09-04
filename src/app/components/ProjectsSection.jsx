@@ -16,12 +16,21 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Text Repeater Maste",
-    description: "ext Repeater Master repeats texts symbols and emojis, as many times as you want",
+    title: "Text Repeater Master",
+    description: "Text Repeater Master repeats texts symbols and emojis, as many times as you want",
     image: "/images/projects/text_repeater_master.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
     previewUrl: "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
+  },
+  {
+    id: 3,
+    title: "Portfolio Danilo Nascimento",
+    description: "My personal portofilo with my projects and a lote about me",
+    image: "/images/projects/danilo-nascimento-dev-portfolio.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DaniloDev/danilo-nascimento-dev-portfolio",
+    previewUrl: "https://danilo-nascimento-dev-portfolio.vercel.app",
   }
 ];
 
