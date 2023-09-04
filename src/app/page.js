@@ -1,4 +1,4 @@
-import Image from "next/image";
+import 'dotenv/config'
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";

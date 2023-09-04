@@ -1,10 +1,58 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { sendEmail } from '../lib/sendEmail'
 
 const EmailSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [canSend, setCanSend] = useState(false);
+ 
+  const resetFields = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  const validateEmail = (text) => {
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(text.target.value) === false) {
+      console.log("Email is Not Correct");
+      setEmail(text.target.value);
+      setCanSend(false);
+    } else {
+      console.log("Email is Correct");
+      setEmail(text.target.value);
+      setCanSend(true);
+    }
+  };
+
+  const fieldsValidated = () => {
+    if (name === "" || email === "" || message === "") {
+      alert("Fill in all fields");
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  const handleEmail = (e) => {
+    e.preventDefault();
+
+    if (fieldsValidated) {
+      if (canSend) {
+        sendEmail(name, email, message);
+        resetFields()
+      } else {
+        alert("Invalid Email");
+      }
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -31,35 +79,38 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleEmail}>
+          <div className="mb-6">
+            <label
+              htmlFor="name"
+              className="text-white block text-sm mb-2 font-medium"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              required
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Your Name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+          </div>
+
           <div className="mb-6">
             <label
               htmlFor="email"
               className="text-white block mb-2 text-sm font-medium"
             >
-              Your email
+              Email
             </label>
             <input
               type="email"
-              id="email"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="jacob@google.com"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="subject"
-              className="text-white block text-sm mb-2 font-medium"
-            >
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Just saying hi"
+              placeholder="example@email.com"
+              onChange={(e) => validateEmail(e)}
+              value={email}
             />
           </div>
           <div className="mb-6">
@@ -70,10 +121,10 @@ const EmailSection = () => {
               Message
             </label>
             <textarea
-              name="message"
-              id="message"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about..."
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
             />
           </div>
           <button
