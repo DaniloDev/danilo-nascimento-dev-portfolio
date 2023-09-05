@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import WhatsAppIcon from "../../../public/whatsapp-icon.svg";
+import InstagramIcon from "../../../public/instagram-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { sendEmail } from '../lib/sendEmail'
@@ -69,12 +71,18 @@ const EmailSection = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-4">
           <Link href="https://github.com/DaniloDev" target="_blank">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image src={GithubIcon} alt="Github Icon" width={40} title="Github"/>
           </Link>
           <Link href="https://linkedin.com/in/danilo-nascimento-dev" target="_blank">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image src={LinkedinIcon} alt="Linkedin Icon" width={40} title="Linkedin"/>
+          </Link>
+          <Link href='https://api.whatsapp.com/send?phone=5571993577705&text=Hello,%20more%20information!' target="_blank">
+            <Image src={WhatsAppIcon} alt="WhatsApp Icon" width={40} title="WhatsApp"/>
+          </Link>
+          <Link href='https://www.instagram.com/danilo.nascim' target="_blank">
+            <Image src={InstagramIcon} alt="Instagram Icon" width={40}  title="Instagram"/>
           </Link>
         </div>
       </div>

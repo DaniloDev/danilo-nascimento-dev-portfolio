@@ -8,7 +8,7 @@ const TAB_DATA = [
     title: "skills",
     id: "skills",
     content: (
-      <div className="flex flex-row list-disc pl-2">
+      <div className="grid md:grid-cols-4 gap-8 md:gap-12">
         <div>
           <label>Frontend Development</label>
           <div>
@@ -36,7 +36,8 @@ const TAB_DATA = [
                 <i className="ri-checkbox-circle-line"></i> Figma
               </li>
               <li>
-                <i className="ri-checkbox-circle-line"></i> Android Studio
+                <i className="ri-checkbox-circle-line"></i> Android
+                Studio(Java/Kotlin)
               </li>
             </ul>
           </div>
@@ -54,19 +55,40 @@ const TAB_DATA = [
                 <i className="ri-checkbox-circle-line"></i> Spring Boot
               </li>
               <li>
+                <i className="ri-checkbox-circle-line"></i> Java
+              </li>
+              <li>
+                <i className="ri-checkbox-circle-line"></i> PHP
+              </li>
+              <li>
                 <i className="ri-checkbox-circle-line"></i> MongoDB
               </li>
               <li>
-                <i className="ri-checkbox-circle-line"></i> Node.js
+                <i className="ri-checkbox-circle-line"></i> Knex
               </li>
               <li>
-                <i className="ri-checkbox-circle-line"></i> MERN
+                <i className="ri-checkbox-circle-line"></i> Express
               </li>
               <li>
                 <i className="ri-checkbox-circle-line"></i> PostgreSQL
               </li>
               <li>
                 <i className="ri-checkbox-circle-line"></i> Sequelize
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span className="flex flex-auto"></span>
+        <div>
+          <label>UI/UX Designer</label>
+          <div>
+            <br />
+            <ul className="list-disc" style={{ listStyle: "none" }}>
+              <li>
+                <i className="ri-checkbox-circle-line"></i> Figma
+              </li>
+              <li>
+                <i className="ri-checkbox-circle-line"></i> Adobe Photoshop
               </li>
             </ul>
           </div>
@@ -92,17 +114,7 @@ const TAB_DATA = [
   {
     title: "Certifications",
     id: "certifications",
-    content: (
-      <ul className="list-disc pl-2" style={{ listStyle: "none" }}>
-        <li>
-          <i className="ri-checkbox-circle-line"></i> AWS Cloud Practitioner
-        </li>
-        <li>
-          <i className="ri-checkbox-circle-line"></i> Google Professional Cloud
-          Developer
-        </li>
-      </ul>
-    ),
+    content: <h3>LOADING... Shortly...</h3>,
   },
 ];
 
