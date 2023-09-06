@@ -31,6 +31,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DaniloDev/danilo-nascimento-dev-portfolio",
     previewUrl: "https://danilo-nascimento-dev-portfolio.vercel.app",
+  },
+  {
+    id: 4,
+    title: "Dropbox Clone",
+    description: "Dropbox Clone - Full Stack Express.js | EJS, Firebase",
+    image: "/images/projects/dropbox_clone.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DaniloDev/dropbox_clone",
+    previewUrl: "https://dropbox-clone-indol.vercel.app",
   }
 ];
 
