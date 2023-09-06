@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Portfolio Danilo Nascimento",
-    description: "My personal portofilo with my projects and a lote about me",
+    description: "My portfolio with some projects and a little about me",
     image: "/images/projects/portfolio-danilo-nascimento-dev.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DaniloDev/danilo-nascimento-dev-portfolio",
