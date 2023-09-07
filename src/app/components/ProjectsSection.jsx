@@ -40,9 +40,18 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DaniloDev/dropbox_clone",
     previewUrl: "https://dropbox-clone-indol.vercel.app",
-  }
+  },
+  {
+    id: 5,
+    title: "AI Summarize using OpenAI GPT-4 - React, Redux, Redux toolkit & Vite",
+    description: "AI Summarize - Get a quick summary of any website",
+    image: "/images/projects/ai-summarize-openai-gpt4.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DaniloDev/ai-summarize-openai-gpt4",
+    previewUrl: "https://ai-summarize-openai-gpt4.netlify.app/",
+  },
+  
 ];
-
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
