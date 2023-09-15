@@ -50,6 +50,15 @@ const projectsData = [
     gitUrl: "https://github.com/DaniloDev/ai-summarize-openai-gpt4",
     previewUrl: "https://ai-summarize-openai-gpt4.netlify.app/",
   },
+  {
+    id: 6,
+    title: "Board - Tasklist - NextJs & Firebase",
+    description: "Save your tasks and support this project",
+    image: "/images/projects/board.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DaniloDev/board",
+    previewUrl: "https://board-phi.vercel.app/",
+  }
   
 ];
 const ProjectsSection = () => {
@@ -93,7 +102,7 @@ const ProjectsSection = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.toReversed().map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
