@@ -6,31 +6,23 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 1,
-    title: "Threads Clone",
-    description: "Threads Clone - Full Stack MERN Next.js 13 | React, Next JS, TypeScript, MongoDB",
-    image: "/images/projects/threads_clone.png",
+    id: 6,
+    title: "Board - Tasklist - NextJs & Firebase",
+    description: "Save your tasks and support this project",
+    image: "/images/projects/board.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/DaniloDev/threads",
-    previewUrl: "https://threads-omega.vercel.app/",
+    gitUrl: "https://github.com/DaniloDev/board",
+    previewUrl: "https://board-phi.vercel.app/",
   },
   {
-    id: 2,
-    title: "Text Repeater Master",
-    description: "Text Repeater Master repeats texts symbols and emojis, as many times as you want",
-    image: "/images/projects/text_repeater_master.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
-    previewUrl: "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
-  },
-  {
-    id: 3,
-    title: "Portfolio Danilo Nascimento",
-    description: "My portfolio with some projects and a little about me",
-    image: "/images/projects/portfolio-danilo-nascimento-dev.png",
+    id: 5,
+    title:
+      "AI Summarize using OpenAI GPT-4 - React, Redux, Redux toolkit & Vite",
+    description: "AI Summarize - Get a quick summary of any website",
+    image: "/images/projects/ai-summarize-openai-gpt4.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/DaniloDev/danilo-nascimento-dev-portfolio",
-    previewUrl: "https://danilo-nascimento-dev-portfolio.vercel.app",
+    gitUrl: "https://github.com/DaniloDev/ai-summarize-openai-gpt4",
+    previewUrl: "https://ai-summarize-openai-gpt4.netlify.app/",
   },
   {
     id: 4,
@@ -42,24 +34,37 @@ const projectsData = [
     previewUrl: "https://dropbox-clone-indol.vercel.app",
   },
   {
-    id: 5,
-    title: "AI Summarize using OpenAI GPT-4 - React, Redux, Redux toolkit & Vite",
-    description: "AI Summarize - Get a quick summary of any website",
-    image: "/images/projects/ai-summarize-openai-gpt4.png",
+    id: 3,
+    title: "Portfolio Danilo Nascimento",
+    description: "My portfolio with some projects and a little about me",
+    image: "/images/projects/portfolio-danilo-nascimento-dev.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/DaniloDev/ai-summarize-openai-gpt4",
-    previewUrl: "https://ai-summarize-openai-gpt4.netlify.app/",
+    gitUrl: "https://github.com/DaniloDev/danilo-nascimento-dev-portfolio",
+    previewUrl: "https://danilo-nascimento-dev-portfolio.vercel.app",
+  },
+
+  {
+    id: 2,
+    title: "Text Repeater Master",
+    description:
+      "Text Repeater Master repeats texts symbols and emojis, as many times as you want",
+    image: "/images/projects/text_repeater_master.png",
+    tag: ["All", "Mobile"],
+    gitUrl:
+      "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
+    previewUrl:
+      "https://play.google.com/store/apps/details?id=com.developtecnologia.text_repeater_master",
   },
   {
-    id: 6,
-    title: "Board - Tasklist - NextJs & Firebase",
-    description: "Save your tasks and support this project",
-    image: "/images/projects/board.png",
+    id: 1,
+    title: "Threads Clone",
+    description:
+      "Threads Clone - Full Stack MERN Next.js 13 | React, Next JS, TypeScript, MongoDB",
+    image: "/images/projects/threads_clone.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/DaniloDev/board",
-    previewUrl: "https://board-phi.vercel.app/",
-  }
-  
+    gitUrl: "https://github.com/DaniloDev/threads",
+    previewUrl: "https://threads-omega.vercel.app/",
+  },
 ];
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
@@ -102,7 +107,7 @@ const ProjectsSection = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.toReversed().map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
