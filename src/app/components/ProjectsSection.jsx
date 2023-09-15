@@ -9,7 +9,7 @@ const projectsData = [
     id: 6,
     title: "Board - Tasklist - NextJs & Firebase",
     description: "Save your tasks and support this project",
-    image: "/images/projects/board.png",
+    image: "/images/projects/board_tasklist.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DaniloDev/board",
     previewUrl: "https://board-phi.vercel.app/",
